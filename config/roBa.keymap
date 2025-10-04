@@ -94,7 +94,18 @@
             label = "TO_LAYER_0";
         };
     };
+// combosやmacrosと同じ階層に以下のbihaviorsを追記
+// スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替えてください
 
+    behaviors {
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+    };
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -126,6 +137,7 @@
 &kp LEFT_SHIFT                 &kp Z     &kp X         &kp C                        &mt V B    &kp N           &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp M  &mt Q L      &mt PERIOD COMMA
 &lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE      &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                        &kp MINUS
             >;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         TenKey {
@@ -135,6 +147,7 @@
 &trans  &trans  &trans  &trans  &trans      &trans      &kp LC(PAGE_UP)  &kp PAGE_DOWN    &kp LC(PAGE_DOWN)  &kp PLUS         &kp SLASH        &mt SEMICOLON COLON
 &trans  &trans  &trans  &trans  &trans      &trans      &trans           &trans                                                                &kp KP_EQUAL
             >;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         Ctrl {
@@ -144,6 +157,7 @@
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp BACKSLASH
 &trans     &trans     &trans     &trans     &trans     &trans                       &trans          &trans                                                                           &kp PIPE
             >;
+            sensor-bindings = <&encoder_msc_down_up>;m
         };
 
         xxxAlt {
