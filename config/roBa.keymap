@@ -4,8 +4,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // #includeのあとのあたりにスクロール量変更の定義を追記
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -123,16 +126,14 @@
 &kp LEFT_SHIFT                 &kp Z     &kp X         &kp C                        &mt V B    &kp N           &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp M  &mt Q L      &mt PERIOD COMMA
 &lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE      &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                        &kp MINUS
             >;
-
-            sensor-bindings = <&inc_dec_kp KP_PLUS KP_MINUS>;
         };
 
         TenKey {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp KP_NUMBER_0  &kp PG_UP        &kp KP_NUMBER_6    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_UP)  &kp PAGE_DOWN    &kp LC(PAGE_DOWN)  &kp PLUS         &kp SLASH        &mt SEMICOLON COLON
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans                                                                &kp KP_EQUAL
+&trans  &trans  &trans  &trans  &kp LS(N7)                               &kp KP_NUMBER_1  &kp KP_NUMBER_2    &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5
+&trans  &trans  &trans  &trans  &trans      &trans      &kp KP_NUMBER_0  &kp PG_UP        &kp KP_NUMBER_6    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans  &trans  &trans  &trans  &trans      &trans      &kp LC(PAGE_UP)  &kp PAGE_DOWN    &kp LC(PAGE_DOWN)  &kp PLUS         &kp SLASH        &mt SEMICOLON COLON
+&trans  &trans  &trans  &trans  &trans      &trans      &trans           &trans                                                                &kp KP_EQUAL
             >;
         };
 
