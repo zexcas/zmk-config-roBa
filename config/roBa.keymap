@@ -2,7 +2,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
 // #includeのあとのあたりにスクロール量変更の定義を追記
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
@@ -76,13 +78,14 @@
             tapping-term-ms = <200>;
         };
     };
+
     behaviors {
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>;
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-caps-word";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            continue-list = <A>;
         };
     };
 
@@ -92,12 +95,12 @@
         default_layer {
             bindings = <
 &mt LA(GRAVE) ESCAPE           &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                &mt F1 Y        &kp U            &kp I  &kp O        &kp P
-&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 F   &kp KP_N0       &kp MINUS                    &kp UP_ARROW    &kp H            &kp K  &lt 5 ENTER  &kp J
+&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 F   &caps_word      &kp MINUS                    &kp UP_ARROW    &kp H            &kp K  &lt 5 ENTER  &kp J
 &kp LEFT_SHIFT                 &kp Z     &kp X         &kp C                        &mt V B    &kp N           &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp M  &mt Q L      &mt PERIOD COMMA
 &lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE      &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                        &kp MINUS
             >;
 
-                    sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp KP_PLUS KP_MINUS>;
         };
 
         TenKey {
