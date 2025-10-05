@@ -33,6 +33,7 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 // AutoMouseLayer改修(20251005)
+#include <roBa_R.overlay>
 &mkp_input_listener {
     input-processors = <&zip_temp_layer 4 10000>;
 };
