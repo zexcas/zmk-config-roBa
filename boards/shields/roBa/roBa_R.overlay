@@ -1,3 +1,4 @@
+#include <input/processors.dtsi>
 #include "roBa.dtsi"
 
 &default_transform {
