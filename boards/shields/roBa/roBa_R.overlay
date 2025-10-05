@@ -20,6 +20,7 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
         excluded-positions = <
+            0
             1
             2
             3
@@ -35,10 +36,10 @@
             13
             14
             15
-            16
-            17 // Printのはず
-            18 // ↑のはず
-            23 // Shiftのはず
+            16 // Printのはず
+            17 // ↑のはず
+            18 // 
+            22 // Shiftのはず
             24
             25
             26
@@ -58,7 +59,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         // AutoMouseLayer改修(20251005)
-        input-processors = <&zip_temp_layer 4 10000>;
+        input-processors = <&zip_temp_layer 4 7000>;
     };
 };
 
