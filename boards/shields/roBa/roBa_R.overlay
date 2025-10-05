@@ -15,6 +15,7 @@
 };
 // AutoMouseLayer改修(20251005)
 &zip_temp_layer {
+    require-prior-idle-ms = <500>;
     excluded-positions = <
         1
         2
@@ -88,7 +89,7 @@
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 //test
     trackball: trackball@0 {
-        status = "okay";
+        status = "disabled";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
