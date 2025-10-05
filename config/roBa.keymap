@@ -157,7 +157,7 @@
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp BACKSLASH
 &trans     &trans     &trans     &trans     &trans     &trans                       &trans          &trans                                                                           &kp PIPE
             >;
-            sensor-bindings = <&encoder_msc_down_up>;m
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         xxxAlt {
