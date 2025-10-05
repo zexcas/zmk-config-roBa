@@ -13,12 +13,48 @@
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             ;
 };
-
+// AutoMouseLayer改修(20251005)
+&zip_temp_layer {
+    excluded-positions = <
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+        11
+        12
+        13
+        14
+        15
+        16
+        17 // Printのはず
+        18 // ↑のはず
+        23 // Shiftのはず
+        24
+        25
+        26
+        27
+        28
+        29
+        30
+        31 // →のはず
+        35 // Ctrlのはず
+        36 // Tabのはず
+        37 // Altのはず
+    >;
+};
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        // AutoMouseLayer改修(20251005)
+        input-processors = <&zip_temp_layer 4 10000>;
     };
 };
 
