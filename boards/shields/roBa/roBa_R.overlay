@@ -41,7 +41,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         // AutoMouseLayer改修(20251005)
-        input-processors = <&zip_temp_layer 4 7000>;
+        input-processors = <&zip_temp_layer 4 60000>;
     };
 };
 
