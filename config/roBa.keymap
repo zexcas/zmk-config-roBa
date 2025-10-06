@@ -161,10 +161,10 @@
 
         Ctrl {
             bindings = <
-&kp MINUS  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                               &kp LC(NUMBER_1)  &kp LC(U)          &kp LC(N5)            &kp LEFT_PARENTHESIS  &kp LC(P)
-&kp LC(A)  &kp LC(Y)  &none      &kp LC(F)  &kp LC(B)  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &trans            &kp LC(H)          &mt LC(S) LEFT_SHIFT  &kp DOLLAR            &kp PERCENT
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp BACKSLASH
-&trans     &trans     &trans     &trans     &trans     &trans                       &trans          &trans                                                                           &kp PIPE
+&kp MINUS  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                       &kp LC(NUMBER_1)  &kp LC(U)  &kp LC(KP_N5)         &kp LC(O)  &kp LC(P)
+&kp LC(A)  &kp LC(Y)  &none      &kp LC(F)  &kp LC(B)  &kp LC(LA(KP_NUMBER_0))      &trans  &trans            &kp LC(H)  &mt LC(S) LEFT_SHIFT  &trans     &trans
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &trans  &trans            &trans     &trans                &trans     &trans
+&trans     &trans     &trans     &trans     &trans     &trans                       &trans  &trans                                                        &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
