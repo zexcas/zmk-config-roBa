@@ -41,7 +41,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <350>;
+    tapping-term-ms = <300>;//長押し時間判定時間
 };
 
 &trackball {
@@ -141,10 +141,10 @@
 
         default_layer {
             bindings = <
-&mt LA(GRAVE) ESCAPE           &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                          &mt F1 Y        &kp U            &kp I  &kp O        &kp P
-&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 G   &caps_word              &mt LA(PRINTSCREEN) LS(LG(S))  &kp UP_ARROW    &kp H            &kp K  &lt 5 ENTER  &kp J
-&kp LEFT_SHIFT                 &kp Z     &kp X         &kp C                        &mt V B    &mt LEFT_CONTROL N      &kp LEFT_ARROW                 &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp M  &mt Q L      &mt PERIOD COMMA
-&lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT    &kp BACKSPACE                                        &kp MINUS
+&mt LA(GRAVE) ESCAPE           &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                        &mt F1 Y        &kp U            &kp I  &kp O        &kp P
+&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 G   &caps_word              &mt LS(LG(S)) LEFT_SHIFT     &kp UP_ARROW    &kp H            &kp K  &lt 5 ENTER  &kp J
+&kp LEFT_SHIFT                 &kp Z     &kp X         &kp C                        &mt V B    &mt LEFT_CONTROL N      &kp LEFT_ARROW               &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp M  &mt Q L      &mt PERIOD COMMA
+&lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                        &kp MINUS
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -163,10 +163,10 @@
 
         Ctrl {
             bindings = <
-&kp MINUS  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                                   &kp LC(NUMBER_1)    &kp LC(U)            &kp LC(NUMBER_5)      &kp LC(O)  &kp LC(P)
-&kp LC(A)  &kp LC(Y)  &none      &kp LC(F)  &kp LC(B)  &kp LC(LA(KP_NUMBER_0))      &trans              &kp LC(UP_ARROW)    &kp LC(H)            &mt LC(S) LEFT_SHIFT  &trans     &trans
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans                &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans                       &trans              &trans                                                                    &trans
+&kp MINUS  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                                               &kp LC(NUMBER_1)    &kp LC(U)            &kp LC(NUMBER_5)      &kp LC(O)  &kp LC(P)
+&kp LC(A)  &kp LC(Y)  &none      &kp LC(F)  &kp LC(B)  &kp LC(LA(KP_NUMBER_0))      &mt LA(PRINTSCREEN) LEFT_SHIFT  &kp LC(UP_ARROW)    &kp LC(H)            &mt LC(S) LEFT_SHIFT  &trans     &trans
+&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(N)                    &kp LC(LEFT_ARROW)              &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans                &trans     &trans
+&trans     &trans     &trans     &trans     &trans     &trans                       &trans                          &trans                                                                    &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
