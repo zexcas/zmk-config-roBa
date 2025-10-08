@@ -90,9 +90,14 @@
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
         };
-        test {
+        LongTapF5 {
             bindings = <&kp F5>;
             key-positions = <11>;
+            require-prior-idle-ms = <800>;
+        };
+        ShortTapF5 {
+            bindings = <&kp F5>;
+            key-positions = <11 36>;
         };
     };
 
