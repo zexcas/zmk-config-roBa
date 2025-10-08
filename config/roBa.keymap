@@ -41,7 +41,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <300>;//長押し時間判定時間
+    tapping-term-ms = <400>;//長押し時間判定時間
 };
 
 &trackball {
