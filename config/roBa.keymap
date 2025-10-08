@@ -90,15 +90,27 @@
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
         };
-        LongTapF5 {
-            bindings = <&kp F5>;
-            key-positions = <11>;
-            require-prior-idle-ms = <800>;
+        Pw1 {
+            bindings = <&pw1>;
+            key-positions = <1 4>;
         };
-        ShortTapF5 {
-            bindings = <&kp F5>;
-            key-positions = <11 36>;
+        Pw2 {
+            bindings = <&pw2>;
+            key-positions = <11 14>;
         };
+        Pw3 {
+            bindings = <&pw3>;
+            key-positions = <23 26>;
+        };
+        //LongTapF5 {
+        //    bindings = <&kp F5>;
+        //    key-positions = <11>;
+        //    require-prior-idle-ms = <800>;//直前キー押下からxx ms以内では発動無効
+        //};
+        //ShortTapF5 {
+        //    bindings = <&kp F5>;
+        //    key-positions = <11 36>;
+        //};
     };
 
     macros {
