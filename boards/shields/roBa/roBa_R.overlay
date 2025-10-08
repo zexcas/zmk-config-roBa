@@ -21,10 +21,11 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>; //キー入力後のALM非発動時間
         excluded-positions = < //AML離脱キーの除外定義
-            21 //J（右クリック）
+            20 //
+            21 //右クリック
             22
             27
-            31 //M（左クリック）
+            31 //左クリック
             34
             35
             36
