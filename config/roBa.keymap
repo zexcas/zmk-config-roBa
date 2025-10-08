@@ -90,6 +90,10 @@
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
         };
+        test {
+            bindings = <&kp F5>;
+            key-positions = <11>;
+        };
     };
 
     macros {
@@ -103,21 +107,21 @@
         pw1: pw1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(B) &kp E &kp N &kp G &kp N9 &kp N5 &kp N4 &kp N3 &kp MINUS &kp N1 &kp N1 &kp N1& kp ENTER>;
+            bindings = <&none &kp LS(B) &kp E &kp N &kp G &kp N9 &kp N5 &kp N4 &kp N3 &kp MINUS &kp N1 &kp N1 &kp N1 &kp ENTER>;
             label = "PW1";
         };
 
         pw2: pw2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 kp ENTER>;
+            bindings = <&none &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
             label = "PW2";
         };
 
         pw3: pw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS kp ENTER>;
+            bindings = <&none &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "PW3";
         };
     };
