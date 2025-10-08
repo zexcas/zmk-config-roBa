@@ -66,9 +66,9 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
+        Henkkan {
+            bindings = <&kp LA(GRAVE)>;
+            key-positions = <0 1>;
         };
 
         shift_tab {
@@ -81,14 +81,15 @@
             key-positions = <11 10>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+        RightBotton {
+            bindings = <&mkp MB2>;
             key-positions = <20 21>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        LongTap-F5 {
+            bindings = <&kp F5>;
+            key-positions = <11>;
+            require-prior-idle-ms = <800>;
         };
     };
 
@@ -141,10 +142,10 @@
 
         default_layer {
             bindings = <
-&mt LA(GRAVE) ESCAPE           &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                    &mt F1 Y       &kp U    &kp I           &kp O           &kp P
-&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 G   &caps_word          &mt LS(LG(S)) LEFT_SHIFT     &mt F11 H      &kp J    &kp K           &kp UP_ARROW    &kp ENTER  
-&kp LEFT_SHIFT                 &kp Z     &mt Q X       &kp C                        &mt V B    &mt LEFT_CONTROL L  &kp  MINUS                   &kp N          &kp M    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW        
-&lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE          &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                           &mt PERIOD COMMA
+&mt LA(GRAVE) ESCAPE           &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
+&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 G   &caps_word              &mt LS(LG(S)) LEFT_SHIFT     &mt F11 H      &kp J  &kp K           &kp UP_ARROW    &kp ENTER
+&kp LEFT_SHIFT                 &kp Z     &mt Q X       &kp C                        &mt V B    &mt LEFT_CONTROL L      &kp MINUS                    &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -154,7 +155,7 @@
             bindings = <
 &trans             &kp RIGHT_BRACE    &kp PIPE              &kp LS(NUMBER_2)  &kp LS(N7)                                           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5
 &kp JP_UNDERSCORE  &kp LS(N8)         &kp LS(N9)            &kp LS(SLASH)     &kp JP_AT         &trans            &kp KP_NUMBER_0  &kp LEFT_SHIFT   &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans             &kp LS(LESS_THAN)  &kp LS(GREATER_THAN)  &kp LS(NUMBER_1)  &kp LS(NUMBER_6)  &kp LS(APOS)      &kp RS(UNDER)    &kp COLON        &kp SLASH        &kp LC(PAGE_UP)  &kp PAGE_DOWN    &kp LC(PAGE_DOWN)  
+&trans             &kp LS(LESS_THAN)  &kp LS(GREATER_THAN)  &kp LS(NUMBER_1)  &kp LS(NUMBER_6)  &kp LS(APOS)      &kp RS(UNDER)    &kp COLON        &kp SLASH        &kp LC(PAGE_UP)  &kp PAGE_DOWN    &kp LC(PAGE_DOWN)
 &trans             &trans             &trans                &trans            &trans            &trans            &trans           &trans                                                              &mt SEMICOLON APOS
             >;
 
@@ -163,7 +164,7 @@
 
         Ctrl {
             bindings = <
-&kp MINUS  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                                               &kp LC(NUMBER_1)  &kp LC(U)  &kp LC(NUMBER_5)      &kp LC(O)           &kp LC(P)
+&trans     &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                                               &kp LC(NUMBER_1)  &kp LC(U)  &kp LC(NUMBER_5)      &kp LC(O)           &kp LC(P)
 &kp LC(A)  &kp LC(Y)  &kp LC(D)  &kp LC(F)  &kp LC(B)  &kp LC(LA(KP_NUMBER_0))      &mt LA(PRINTSCREEN) LEFT_SHIFT  &kp LC(H)         &trans     &mt LC(S) LEFT_SHIFT  &kp LC(UP_ARROW)    &kp LC(ENTER)
 &trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &trans                          &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)    &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
 &trans     &trans     &trans     &trans     &trans     &trans                       &trans                          &trans                                                                 &kp LC(SEMICOLON)
