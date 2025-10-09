@@ -167,7 +167,7 @@
         upw3: upw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
+            bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "UPW3";
         };
     };
