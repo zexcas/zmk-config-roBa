@@ -162,10 +162,10 @@
             label = "UPW2";
         };
 
-        uw3: upw3 {
+        upw3: upw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp N0 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
+            bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "UPW3";
         };
     };
@@ -274,7 +274,7 @@
             bindings = <
 &bootloader  &trans        &trans        &trans        &trans                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans       &trans        &trans        &trans        &trans  &trans      &trans  &trans        &trans        &trans        &trans        &trans
-&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &pw1    &pw2          &pw3          &trans        &trans        &bt BT_CLR
+&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans       &trans        &trans        &trans        &trans  &trans      &trans  &trans                                                  &bt BT_CLR_ALL
             >;
         };
