@@ -102,16 +102,18 @@
             bindings = <&pw1>;
             key-positions = <1 4>;
         };
-        UP2 {
-            bindings = <&up2>;
+        UPw2 {
+            bindings = <&upw2>;
             key-positions = <11 13>;
+        };
         Pw2 {
             bindings = <&pw2>;
             key-positions = <11 14>;
         };
-        UP3 {
-            bindings = <&up3>;
+        UPw3 {
+            bindings = <&upw3>;
             key-positions = <23 25>;
+        };
         Pw3 {
             bindings = <&pw3>;
             key-positions = <23 26>;
@@ -155,14 +157,14 @@
             bindings = <&none &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "PW3";
         };
-        up2: up2 {
+        upw2: upw2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp N0 &kp TAB &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
             label = "UPW2";
         };
 
-        up3: up3 {
+        upw3: upw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
