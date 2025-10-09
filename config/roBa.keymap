@@ -90,14 +90,28 @@
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
         };
+        Win {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <37 38>;
+        };
+        WinD {
+            bindings = <&kp LG(D)>;
+            key-positions = <37 38 39>;
+        };
         Pw1 {
             bindings = <&pw1>;
             key-positions = <1 4>;
         };
+        UPw2 {
+            bindings = <&upw2>;
+            key-positions = <11 13>;
         Pw2 {
             bindings = <&pw2>;
             key-positions = <11 14>;
         };
+        UPw3 {
+            bindings = <&upw3>;
+            key-positions = <23 25>;
         Pw3 {
             bindings = <&pw3>;
             key-positions = <23 26>;
@@ -141,6 +155,19 @@
             bindings = <&none &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "PW3";
         };
+        upw2: upw2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp 0 &kp TAB &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
+            label = "UPW2";
+        };
+
+        uw3: upw3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp 0 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
+            label = "UPW3";
+        };
     };
 
     // combosやmacrosと同じ階層に以下のbihaviorsを追記
@@ -183,10 +210,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE                     &mt F6 W  &mt F7 E      &mt F10 R                    &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
-&kp A                          &mt F5 S  &mt F4 D      &mt F3 F                     &mt F2 G   &caps_word              &kp MINUS                    &mt F11 H      &kp J  &kp K           &kp UP_ARROW    &kp ENTER
-&kp LEFT_SHIFT                 &kp Z     &mt Q X       &kp C                        &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&lt_to_layer_0 2 LEFT_CONTROL  &kp TAB   &kp LEFT_ALT  &lt_to_layer_0 1 LEFT_SHIFT  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
+&kp ESCAPE                     &mt F6 W      &mt F7 E  &mt F10 R  &mt F8 T                                                                          &mt F1 Y       &kp U  &kp I           &kp O           &kp P
+&kp A                          &mt F5 S      &mt F4 D  &mt F3 F   &mt F2 G                     &caps_word              &kp MINUS                    &mt F11 H      &kp J  &kp K           &kp UP_ARROW    &kp ENTER
+&kp LEFT_SHIFT                 &kp Z         &mt Q X   &kp C      &kp V                        &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB   &kp SPACE  &lt_to_layer_0 1 LEFT_SHIFT  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -205,10 +232,10 @@
 
         Ctrl {
             bindings = <
-&trans     &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(NUMBER_1)  &kp LC(U)  &kp LC(NUMBER_5)    &kp LC(O)           &kp LC(P)
-&kp LC(A)  &kp LC(Y)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &trans     &kp LC(K)           &kp LC(UP_ARROW)    &kp LC(ENTER)
-&trans     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
-&trans     &trans     &trans     &trans     &trans     &trans                       &trans                &trans                                                                 &kp LC(SEMICOLON)
+&trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(NUMBER_1)  &kp LC(U)  &kp LC(NUMBER_5)    &kp LC(O)           &kp LC(P)
+&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &trans     &kp LC(K)           &kp LC(UP_ARROW)    &kp LC(ENTER)
+&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
+&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &trans                       &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
