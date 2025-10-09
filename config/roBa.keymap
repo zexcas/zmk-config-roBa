@@ -118,11 +118,11 @@
             bindings = <&pw3>;
             key-positions = <23 26>;
         };
-        //LongTapF5 {
-        //    bindings = <&kp F5>;
-        //    key-positions = <11>;
-        //    require-prior-idle-ms = <800>;//直前キー押下からxx ms以内では発動無効
-        //};
+        Escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1>;
+            require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+        };
         //ShortTapF5 {
         //    bindings = <&kp F5>;
         //    key-positions = <11 36>;
@@ -212,10 +212,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE                     &mt F6 W      &mt F7 E  &mt F10 R  &mt F8 T                                                                          &mt F1 Y       &kp U  &kp I           &kp O           &kp P
-&kp A                          &mt F5 S      &mt F4 D  &mt F3 F   &mt F2 G                     &caps_word              &kp MINUS                    &mt F11 H      &kp J  &kp K           &kp UP_ARROW    &kp ENTER
-&kp LEFT_SHIFT                 &kp Z         &mt Q X   &kp C      &kp V                        &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB   &kp SPACE  &lt_to_layer_0 1 LEFT_SHIFT  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
+&trans                         &mt F6 W      &mt F7 E  &mt F10 R               &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
+&kp A                          &mt F5 S      &mt F4 D  &mt F3 F                &mt F2 G   &caps_word              &kp MINUS                    &mt F11 H      &kp J  &kp K           &kp UP_ARROW    &kp ENTER
+&kp LEFT_SHIFT                 &kp Z         &mt Q X   &kp C                   &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB   &lt_to_layer_0 1 SPACE  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
