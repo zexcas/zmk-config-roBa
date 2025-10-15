@@ -122,6 +122,10 @@
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
         };
+        SCWM {
+            bindings = <&scwm>;
+            key-positions = <28 30>;
+        };
 
         Amuhennkann {
             bindings = <&to_layer_0 INT_MUHENKAN>;
@@ -173,6 +177,12 @@
             #binding-cells = <0>;
             bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "UPW3";
+        };
+        scwm: scwm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH>;
+            label = "scwm";
         };
     };
 
