@@ -36,7 +36,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 800>; };
 
 &mt {
     flavor = "balanced";
@@ -81,10 +81,10 @@
             key-positions = <16 28>;
         };
 
-        LeftClick {
-            bindings = <&mkp MB1>;
-            key-positions = <20 31>;
-        };
+        //LeftClick {
+        //    bindings = <&mkp MB1>;
+        //    key-positions = <20 31>;
+        //};
         RightClick {
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
@@ -260,10 +260,10 @@
 
         MOUSE {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans                       &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &lt_to_layer_0 5 LEFT_SHIFT  &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                       &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &lt_to_layer_0 5 LEFT_SHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &trans                       &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
             >;
         };
 
