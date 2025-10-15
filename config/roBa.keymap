@@ -81,11 +81,6 @@
             key-positions = <16 28>;
         };
 
-        Amuhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         LeftClick {
             bindings = <&mkp MB1>;
             key-positions = <20 31>;
@@ -126,6 +121,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+        };
+
+        Amuhennkann {
+            bindings = <&to_layer_0 INT_MUHENKAN>;
+            key-positions = <11 10>;
         };
         //ShortTapF5 {
         //    bindings = <&kp F5>;
@@ -260,10 +260,10 @@
 
         MOUSE {
             bindings = <
-&trans           &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans                       &trans
-&trans           &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &lt_to_layer_0 5 LEFT_SHIFT  &trans
-&trans           &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                       &trans
-&kp LEFT_CONTRO  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
+&trans            &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans                       &trans
+&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &lt_to_layer_0 5 LEFT_SHIFT  &trans
+&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                       &trans
+&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
             >;
         };
 
