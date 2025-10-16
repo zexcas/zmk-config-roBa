@@ -21,10 +21,11 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>; //キー入力後のALM非発動時間
         excluded-positions = < //AML離脱キーの除外定義
+            19 //左クリック
             20 //
             22
             27
-            31 //左クリック
+            //31 //左クリック
             //33 //右クリック
             34 //Ctrl
             35 //Alt
@@ -42,7 +43,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         // AutoMouseLayer改修(20251005)
-        input-processors = <&zip_temp_layer 4 800>;
+        input-processors = <&zip_temp_layer 4 8000>;//カーソル移動後のAML滞在時間
     };
 };
 
