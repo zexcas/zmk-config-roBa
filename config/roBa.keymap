@@ -127,10 +127,10 @@
             key-positions = <28 30>;
         };
 
-        Amuhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
+        //Amuhennkann {
+        //    bindings = <&to_layer_0 INT_MUHENKAN>;
+        //    key-positions = <11 10>;
+        //};
         //ShortTapF5 {
         //    bindings = <&kp F5>;
         //    key-positions = <11 36>;
