@@ -75,15 +75,15 @@
             bindings = <&kp LA(GRAVE)>;
             key-positions = <0 10>;
         };
-        F6 {
+        ComF6 {
             bindings = <&kp F6>;
             key-positions = <0 1>;
         };
-        F7 {
+        ComF7 {
             bindings = <&kp F7>;
             key-positions = <0 2>;
         };
-        F10 {
+        ComF10 {
             bindings = <&kp F10>;
             key-positions = <0 3>;
         };
