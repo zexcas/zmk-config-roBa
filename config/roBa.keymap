@@ -213,7 +213,7 @@
         autoPic: autoPic {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LA(PRINTSCREEN) &none &none &kp LA(TAB) &none &none &none &none &kp LC(V) &none &kp ESCAPE &none &kp PAGE_DOWN &none &none &kp LA(TAB)>;
+            bindings = <&none &kp LA(PRINTSCREEN) &none &none &none &none &kp LA(TAB) &none &none &none &none &kp LC(V) &none &none &none &none &kp ESCAPE &none &none &none &none &kp PAGE_DOWN &none &none &none &none &kp LA(TAB)>;
             label = "autoPic";
         };
     };
