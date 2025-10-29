@@ -73,7 +73,7 @@
 
         LangChange {
             bindings = <&kp LA(GRAVE)>;
-            key-positions = <1 10>;
+            key-positions = <2 10>;
         };
         ComF6 {
             bindings = <&kp F6>;
@@ -259,10 +259,10 @@
         default_layer {
             bindings = <
 //&trans                         &mt F6 W      &mt F7 E  &mt F10 R               &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
-&trans                         &kp W         &kp E               &kp R                   &mt F8 T                                                        &mt F1 U         &kp I           &kp O  &kp Y         &kp P
+&trans                         &kp W         &kp E               &kp R                   &mt F8 T                                                        &kp U         &kp I           &kp O  &kp Y         &kp P
 &kp A                          &mt F5 S      &mt F4 D            &mt F3 F                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &kp J           &kp UP_ARROW    &kp ENTER
-&mt LEFT_SHIFT TAB             &kp Z         &mt Q X             &kp C                   &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
+&kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp DELETE              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
