@@ -81,15 +81,15 @@
         };
         ComF6 {
             bindings = <&kp F6>;
-            key-positions = <0 1>;
+            key-positions = <0 2>;
         };
         ComF7 {
             bindings = <&kp F7>;
-            key-positions = <0 2>;
+            key-positions = <0 3>;
         };
         ComF10 {
             bindings = <&kp F10>;
-            key-positions = <0 3>;
+            key-positions = <0 1>;
         };
 
         PrintSC1 {
@@ -100,6 +100,10 @@
         AltPrintSC {
             bindings = <&kp LA(PRINTSCREEN)>;
             key-positions = <16 28>;
+        };
+        Save {
+            bindings = <&kp LC(S)>;
+            key-positions = <16 41>;
         };
 
         //LeftClick {
@@ -117,6 +121,10 @@
         WinD {
             bindings = <&kp LG(D)>;
             key-positions = <37 38 39>;
+        };
+        WinShift {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <26 37 39>;
         };
         Pw1 {
             bindings = <&pw1>;
