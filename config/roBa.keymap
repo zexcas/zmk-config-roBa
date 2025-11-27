@@ -91,6 +91,10 @@
             bindings = <&kp F10>;
             key-positions = <0 1>;
         };
+        ComAltF4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <1 35>;
+        };
 
         PrintSC1 {
             bindings = <&kp LS(LG(S))>;
@@ -271,6 +275,7 @@
         default_layer {
             bindings = <
 //&trans                         &mt F6 W      &mt F7 E  &mt F10 R               &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
+
 &trans                         &kp W         &kp E               &kp R                   &kp T                                                        &kp U         &kp I           &kp O  &kp P         &mt F8 F
 &kp A                          &mt F5 S      &mt F4 D            &mt F3 Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &kp J           &kp UP_ARROW    &kp ENTER
 &kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
@@ -294,7 +299,7 @@
         Ctrl {
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(F)
-&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &kp LC(J)           &kp LC(UP_ARROW)    &kp LC(ENTER)
+&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &mkp MB1           &kp LC(UP_ARROW)    &kp LC(ENTER)
 &kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
 &trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(DELETE)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
@@ -318,7 +323,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LEFT_SHIFT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                       &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                 &trans
             >;
         };
 
