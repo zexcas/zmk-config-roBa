@@ -217,13 +217,13 @@
         scwm: scwm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH>;
+            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH &kp F10>;
             label = "scwm";
         };
         se16n: se16n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp ENTER>;
+            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp F10 &kp ENTER>;
             label = "se16n";
         };
         autoPic: autoPic {
