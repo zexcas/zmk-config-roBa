@@ -64,11 +64,17 @@
 
 / {
     combos {
+        //Key番号：0,10,22,34
         compatible = "zmk,combos";
         Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+        };
+        V {
+            bindings = <&kp V>;
+            key-positions = <26 37>;
+            layers = <0>;
         };
 
         //LangChange {
@@ -122,10 +128,11 @@
             key-positions = <16 41>;
         };
 
-        //LeftClick {
-        //    bindings = <&mkp MB1>;
-        //    key-positions = <20 31>;
-        //};
+        CtrlLeftClick {
+            bindings = <&CtrlClick>;
+            key-positions = <19>;
+            layers = <2>;
+        };
         RightClick {
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
@@ -138,9 +145,9 @@
             bindings = <&kp LG(D)>;
             key-positions = <37 38 39>;
         };
-        WinShift {
-            bindings = <&kp LG(LEFT_SHIFT)>;
-            key-positions = <26 37 39>;
+        WinLock {
+            bindings = <&kp LG(L)>;
+            key-positions = <27 37 39>;
         };
         Pw1 {
             bindings = <&pw1>;
@@ -229,13 +236,13 @@
         scwm: scwm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH>;
+            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH &kp F10>;
             label = "scwm";
         };
         se16n: se16n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp ENTER>;
+            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp F10 &kp ENTER>;
             label = "se16n";
         };
         autoPic: autoPic {
@@ -243,6 +250,12 @@
             #binding-cells = <0>;
             bindings = <&none &sk LEFT_ALT &kp PRINTSCREEN &none &none &none &sk LEFT_ALT &kp TAB &none &none &none &none &kp LC(V) &none &none &none &none &none &kp ESCAPE &none &none &none &none &none &kp PAGE_DOWN &none &none &none &none &sk LEFT_ALT &kp TAB>;
             label = "autoPic";
+        };
+        CtrlClick: CtrlClick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &sk LEFT_SHIFT &mkp MB1>;
+            label = "CtrlClick";
         };
     };
 
@@ -283,15 +296,14 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
             bindings = <
 //&trans                         &mt F6 W      &mt F7 E  &mt F10 R               &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
 
 &trans                         &kp W         &kp E               &kp R                   &kp T                                                        &kp U         &kp I           &kp O  &kp P         &mt F8 DELETE
-&kp A                          &kp S      &kp D            &kp Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &kp J           &kp UP_ARROW    &kp ENTER
-&kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp V      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp F              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
+&kp A                          &kp S      &kp D            &kp Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &mkp MB1           &kp UP_ARROW    &kp ENTER
+&kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp F      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp J              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -311,9 +323,9 @@
         Ctrl {
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(DELETE)
-&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &mkp MB1           &kp LC(UP_ARROW)    &kp LC(ENTER)
+&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &none           &kp LC(UP_ARROW)    &kp LC(ENTER)
 &kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
-&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(F)               &trans                &trans                                                                 &kp LC(SEMICOLON)
+&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(J)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -333,7 +345,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                       &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LEFT_SHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &lt_to_layer_0 5 LEFT_SHIFT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                 &trans
             >;
