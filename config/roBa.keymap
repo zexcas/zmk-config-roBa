@@ -130,8 +130,8 @@
 
         CtrlLeftClick {
             bindings = <&CtrlClick>;
-            key-positions = <19>;
             layers = <2>;
+            key-positions = <19>;
         };
         RightClick {
             bindings = <&mkp MB2>;
