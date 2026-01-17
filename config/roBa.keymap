@@ -71,12 +71,11 @@
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
         };
-        V {
-            bindings = <&kp V>;
-            key-positions = <26 37>;
-            layers = <0>;
-        };
-
+        //keyV {
+        //    bindings = <&kp V>;
+        //    key-positions = <26 37>;
+        //    layers = <0>;
+        //};
         //LangChange {
         //    bindings = <&kp LA(GRAVE)>;
         //    key-positions = <2 10>;
