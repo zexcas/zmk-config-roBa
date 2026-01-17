@@ -99,15 +99,15 @@
         };
         ComF5 {
             bindings = <&kp F5>;
-            key-positions = <0 12>;
+            key-positions = <0 11>;
         };
         ComF4 {
             bindings = <&kp F4>;
-            key-positions = <0 13>;
+            key-positions = <0 12>;
         };
         ComF3 {
             bindings = <&kp F3>;
-            key-positions = <0 14>;
+            key-positions = <0 13>;
         };
         ComAltF4 {
             bindings = <&kp LA(F4)>;
@@ -128,11 +128,11 @@
             key-positions = <16 41>;
         };
 
-        CtrlLeftClick {
-            bindings = <&CtrlClick>;
-            layers = <2>;
-            key-positions = <19>;
-        };
+        //CtrlLeftClick {
+        //    bindings = <&CtrlClick>;
+        //    layers = <2>;
+        //    key-positions = <19>;
+        //};
         RightClick {
             bindings = <&mkp MB2>;
             key-positions = <20 21>;
@@ -254,7 +254,7 @@
         CtrlClick: CtrlClick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &sk LEFT_SHIFT &mkp MB1>;
+            bindings = <&none &sk LEFT_CONTROL &mkp MB1>;
             label = "CtrlClick";
         };
     };
@@ -323,7 +323,7 @@
         Ctrl {
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(DELETE)
-&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &none           &kp LC(UP_ARROW)    &kp LC(ENTER)
+&kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &CtrlClick       &kp LC(UP_ARROW)    &kp LC(ENTER)
 &kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
 &trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(J)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
