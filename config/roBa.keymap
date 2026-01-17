@@ -64,18 +64,19 @@
 
 / {
     combos {
-        //Key番号：0,10,22,34
+        //Key番号：0,10,22,34,
+        //combo名1文字はBuildエラーになる
         compatible = "zmk,combos";
         Escape {
             bindings = <&kp ESCAPE>;
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
         };
-        //keyV {
-        //    bindings = <&kp V>;
-        //    key-positions = <26 37>;
-        //    layers = <0>;
-        //};
+        keyV {
+            bindings = <&kp V>;
+            key-positions = <26 37>;
+            layers = <0>;
+        };
         //LangChange {
         //    bindings = <&kp LA(GRAVE)>;
         //    key-positions = <2 10>;
