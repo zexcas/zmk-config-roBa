@@ -351,7 +351,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                       &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LEFT_SHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &lt_to_layer_0 5 LEFT_SHIFT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                 &trans
             >;
