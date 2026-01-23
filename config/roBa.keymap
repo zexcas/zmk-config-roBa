@@ -76,7 +76,7 @@
             bindings = <&mkp MB1>;
             key-positions = <19>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
-            layers = <0 4>;
+            layers = <0>;
         };
         keyV {
             bindings = <&kp V>;
