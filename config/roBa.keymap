@@ -72,6 +72,12 @@
             key-positions = <0>;
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
         };
+        Click {
+            bindings = <&mkp MB1>;
+            key-positions = <19>;
+            require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+            layers = <0>;
+        };
         keyV {
             bindings = <&kp V>;
             key-positions = <26 37>;
@@ -104,10 +110,14 @@
         ComF4 {
             bindings = <&kp F4>;
             key-positions = <0 12>;
+            require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+            layers = <0>;
         };
         ComF3 {
             bindings = <&kp F3>;
             key-positions = <0 13>;
+            require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
+            layers = <0>;
         };
         ComAltF4 {
             bindings = <&kp LA(F4)>;
@@ -203,46 +213,46 @@
         pw1: pw1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(B) &kp E &kp N &kp G &kp N9 &kp N5 &kp N4 &kp N3 &kp MINUS &kp N1 &kp N1 &kp N1 &kp ENTER>;
+            bindings = <&none &kp BACKSPACE &kp LS(B) &kp E &kp N &kp G &kp N9 &kp N5 &kp N4 &kp N3 &kp MINUS &kp N1 &kp N1 &kp N1 &kp ENTER>;
             label = "PW1";
         };
 
         pw2: pw2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
+            bindings = <&none &kp BACKSPACE &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
             label = "PW2";
         };
 
         pw3: pw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
+            bindings = <&none &kp BACKSPACE &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "PW3";
         };
         upw2: upw2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp N0 &kp TAB &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
+            bindings = <&none &kp BACKSPACE &kp B &kp N1 &kp N7 &kp N7 &kp N8 &kp N0 &kp TAB &kp K &kp K &kp C &kp MINUS &kp JP_AT &kp N9 &kp N5 &kp N4 &kp N3 &kp ENTER>;
             label = "UPW2";
         };
 
         upw3: upw3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
+            bindings = <&none &kp BACKSPACE &kp K &kp I &kp K &kp U &kp C &kp H &kp H &kp N4 &kp TAB &kp LS(W) &kp A &kp X &kp G &kp U &kp N &kp N7 &kp JP_PLUS &kp ENTER>;
             label = "UPW3";
         };
         scwm: scwm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH &kp F10>;
+            bindings = <&none &kp SLASH &kp N &kp SLASH &kp S &kp C &kp W &kp M &kp SLASH>;
             label = "scwm";
         };
         se16n: se16n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp F10 &kp ENTER>;
+            bindings = <&none &kp SLASH &kp O &kp S &kp E &kp N1 &kp N6 &kp N &kp ENTER>;
             label = "se16n";
         };
         autoPic: autoPic {
@@ -301,7 +311,7 @@
 //&trans                         &mt F6 W      &mt F7 E  &mt F10 R               &mt F8 T                                                        &mt F1 Y       &kp U  &kp I           &kp O           &kp P
 
 &trans                         &kp W         &kp E               &kp R                   &kp T                                                        &kp U         &kp I           &kp O  &kp P         &mt F8 DELETE
-&kp A                          &kp S      &kp D            &kp Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &mkp MB1           &kp UP_ARROW    &kp ENTER
+&kp A                          &kp S      &kp D            &kp Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &none           &kp UP_ARROW    &kp ENTER
 &kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp F      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
 &lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp J              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
@@ -345,7 +355,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans                       &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &lt_to_layer_0 5 LEFT_SHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LEFT_SHIFT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans                       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                 &trans
             >;
