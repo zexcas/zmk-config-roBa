@@ -78,11 +78,6 @@
             require-prior-idle-ms = <500>;//直前キー押下からxx ms以内では発動無効
             layers = <0>;
         };
-        keyV {
-            bindings = <&kp V>;
-            key-positions = <26 37>;
-            layers = <0>;
-        };
         //LangChange {
         //    bindings = <&kp LA(GRAVE)>;
         //    key-positions = <2 10>;
@@ -308,8 +303,8 @@
 
 &trans                         &kp W         &kp E               &kp R                   &kp T                                                        &kp U         &kp I           &kp O  &kp P         &mt F8 DELETE
 &kp A                          &kp S      &mt F4 D            &mt F3 Y                &mt F2 G   &kp LS(LC(X))           &kp MINUS                    &mt F11 H      &kp K  &none           &kp UP_ARROW    &kp ENTER
-&kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &kp F      &mt LEFT_CONTROL L      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp J              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
+&kp LEFT_SHIFT              &kp Z         &mt Q X             &kp C                   &mt V F      &mt LEFT_CONTROL J      &kp B                        &kp N          &kp M  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&lt_to_layer_0 2 LEFT_CONTROL  &kp LEFT_ALT  &kp TAB  &lt_to_layer_0 1 SPACE  &kp SPACE  &kp L              &lt_to_layer_0 1 LEFT_SHIFT  &kp BACKSPACE                                         &mt PERIOD COMMA
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -330,8 +325,8 @@
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(DELETE)
 &kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &CtrlClick       &kp LC(UP_ARROW)    &kp LC(ENTER)
-&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(L)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
-&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(J)               &trans                &trans                                                                 &kp LC(SEMICOLON)
+&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                    &kp LC(J)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
+&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(L)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
