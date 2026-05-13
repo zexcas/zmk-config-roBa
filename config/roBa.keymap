@@ -325,7 +325,7 @@
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(DELETE)
 &kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &CtrlClick       &kp LC(UP_ARROW)    &kp LC(ENTER)
-&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &mt LC(V) LC(LS(V)) &kp LC(B)                    &kp LC(J)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
+&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &mt LC(LS(V)) LC(V) &kp LC(B)                    &kp LC(J)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
 &trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(L)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
 
