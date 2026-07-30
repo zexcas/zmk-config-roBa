@@ -182,6 +182,10 @@
             bindings = <&autoPic>;
             key-positions = <16 17 18>;
         };
+        ShiftF12 {
+            bindings = <&shiftF12>;
+            key-positions = <7 9>;
+        };
 
         //Amuhennkann {
         //    bindings = <&to_layer_0 INT_MUHENKAN>;
@@ -258,6 +262,12 @@
             bindings = <&none &sk LEFT_CONTROL &mkp MB1>;
             label = "CtrlClick";
         };
+        shiftF12: shiftF12 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(F12) &none &none &kp F8>;
+            label = "shiftF12";
+        };
     };
 
     // combosやmacrosと同じ階層に以下のbihaviorsを追記
@@ -325,8 +335,8 @@
             bindings = <
 &trans              &kp LC(W)         &kp LC(E)  &kp LC(R)  &kp LC(T)                                                     &kp LC(U)  &kp LC(NUMBER_1)  &kp LC(NUMBER_5)    &kp LC(P)           &kp LC(DELETE)
 &kp LC(A)           &kp LC(Y)         &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(LA(KP_NUMBER_0))      &mt LC(S) LEFT_SHIFT  &kp LC(H)         &kp LC(K)     &CtrlClick       &kp LC(UP_ARROW)    &kp LC(ENTER)
-&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &mt LC(LS(V)) LC(V) &kp LC(B)                    &kp LC(J)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
-&trans              &kp LC(LEFT_ALT)  &trans     &trans     &trans     &kp LC(L)               &trans                &trans                                                                 &kp LC(SEMICOLON)
+&kp LC(LEFT_SHIFT)  &kp LC(Z)         &kp LC(X)  &kp LC(C)  &mt LC(LS(V)) LC(V) &kp LC(B)                    &kp LC(B)             &kp LC(N)         &kp LC(M)  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)
+&trans              &kp LC(LEFT_ALT)  &trans     &mkp MB1     &trans     &kp LC(L)               &trans                &trans                                                                 &kp LC(SEMICOLON)
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -356,8 +366,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                        &trans    &trans         &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &sl 6     &trans    &kp PAGE_UP    &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &kp PAGE_DOWN  &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB5  &mkp MB4                                          &trans
+&trans  &trans  &trans  &kp F8  &kp F7  &kp F6      &kp LS(LC(X))    &trans    &kp PAGE_DOWN  &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)
+&trans  &trans  &trans  &kp F5  &kp F4  &kp F3      &mkp MB5  &mkp MB4                                          &trans
             >;
         };
 
